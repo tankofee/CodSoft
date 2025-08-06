@@ -1,0 +1,114 @@
+/* style.css */
+
+:root {
+  --primary: #007bff;
+  --secondary: #00c6ff;
+  --accent: #ffffff;
+  --text-dark: #333;
+  --bg-light: #f9f9f9;
+  --bg-card: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: var(--accent);
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Main Content */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  background: var(--bg-card);
+  padding: 35px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1rem;
+}
+
+ul li::before {
+  content: '✔️';
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: var(--accent);
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 0.95rem;
+  margin-top: 40px;
+  box-shadow: 0 -2px 10px rgba(0, 123, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 25px;
+  }
+}
